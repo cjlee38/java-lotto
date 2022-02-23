@@ -10,7 +10,8 @@ public enum LottoRank {
     FIFTH(5_000, 3, false),
     SIXTH(0, 0, false);
 
-    private static final int SPECIAL_CASE = 5;
+    public static final int THRESHOLD = 3;
+    public static final int SPECIAL_CASE = 5;
 
     private final int prize;
     private final int matchCount;
@@ -41,5 +42,9 @@ public enum LottoRank {
 
     public int getPrize() {
         return this.prize;
+    }
+
+    public int getMatchCount() {
+        return matchCount;
     }
 }
